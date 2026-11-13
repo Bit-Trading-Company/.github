@@ -1,0 +1,41 @@
+name: A proposal
+description: Something that should exist, or should work differently.
+labels: ["proposal"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: The need
+      description: Who is stuck, and on what. Describe the difficulty before the remedy.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: The proposal
+      description: What you would change. Plain words are better than a design.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What else you considered
+      description: Including doing nothing.
+  - type: dropdown
+    id: reversible
+    attributes:
+      label: If this turns out to be wrong
+      description: How hard would it be to undo?
+      options:
+        - Easy to undo
+        - Possible, with effort
+        - Hard or impossible
+        - I don't know
+    validations:
+      required: true
+  - type: checkboxes
+    id: willing
+    attributes:
+      label: Your part
+      options:
+        - label: I would be willing to build this.

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: A weakness
+    url: https://github.com/Bit-Trading-Company/.github/blob/main/SECURITY.md
+    about: Report it privately. Please do not open a public issue.
+  - name: Anything else
+    url: https://github.com/Bit-Trading-Company/.github/blob/main/SUPPORT.md
+    about: Where a question should go.

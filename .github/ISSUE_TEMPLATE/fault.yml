@@ -1,0 +1,57 @@
+name: A fault
+description: Something does not do what it says it does.
+labels: ["fault"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. A weakness that could be exploited does not belong here: see the security policy.
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened
+      description: What you saw, as exactly as you can put it. Paste errors as text.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to see it again
+      description: The fewest steps that reliably produce it.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, runtime, browser. Whatever applies.
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: Logs, screenshots, what you have already tried. Remove secrets first.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: I looked for an existing issue and found none.
+          required: true
+        - label: This is not a security weakness.
+          required: true
